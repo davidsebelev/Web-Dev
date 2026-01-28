@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- To use an image as a link, put the <img> tag inside the <a> tag: -->
+
+        <!-- Example -->
+        <a href="default.asp">
+          <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+        </a>
+
+
+        Use the CSS float property to let the image float to the right or to the left of a text:
+
+<!-- Example
+<p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+The image will float to the right of the text.</p>
+
+<p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+The image will float to the left of the text.</p> -->
+
+
+<h1>
+    HTML image maps
+</h1>
+
+<p>
+    The HTML <map> tag defines an image map. An image map is an image with clickable areas. 
+</p>
+
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+
+
+<h1>
+    Background Images
+</h1>
+
+<p style="background-image: url('img_girl.jpg');"></p>
+
+
+<style>
+    body {
+      background-image: url('img_girl.jpg');
+    }
+    /* but you will have repating images if image not enough big so use
+    background-repeat: no-repeat; */
+    </style>
+
+
+<!-- If you want the background image to cover the entire element, you can set the background-size property to cover.
+
+Also, to make sure the entire element is always covered, set the background-attachment property to fixed: -->
+
+<!-- This way, the background image will cover the entire element, with no stretching (the image will keep its original proportions): -->
+
+
+<!-- The HTML <picture> Element -->
+    <!-- в зависимости от размера другая картинка тип на разных устройствах -->
+
+    <picture>
+        <source media="(min-width: 650px)" srcset="img_food.jpg">
+        <source media="(min-width: 465px)" srcset="img_car.jpg">
+        <img src="img_girl.jpg">
+      </picture>
+</body>
+
+
+</html>
