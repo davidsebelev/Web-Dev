@@ -1,0 +1,42 @@
+body{
+    background-color: cornflowerblue;
+    font-family: monospace;
+    color: aliceblue;
+}
+.header{
+    color: black;
+}
+#ordered{
+    font-family: sans-serif;
+    color: moccasin;
+}
+#unordered{
+    font-family: cursive;
+    color: darkslateblue;
+}
+a{
+    color:darkblue
+}
+a:hover{
+    color:brown;
+    text-decoration: underline;
+}
+ul{
+    list-style-type: square;
+    padding-left: 40px;
+}
+ol{
+    list-style-type: upper-roman;
+}
+tr:nth-child(even){
+    background-color: red;
+}
+tr:nth-child(odd){
+    background-color: darkblue;
+}
+
+th,tr,td{
+    border-radius: 50px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
