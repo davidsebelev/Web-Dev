@@ -1,37 +1,37 @@
-// symbol represents a unique identifier 
+// // symbol represents a unique identifier 
 
-let id = Symbol();
+// let id = Symbol();
 
-// inside Symbol is label , and even if all labels 
-// are the same , id still be unique
+// // inside Symbol is label , and even if all labels 
+// // are the same , id still be unique
 
-// if we want to show symbol we need to convert it
+// // if we want to show symbol we need to convert it
 
-// let id = Symbol("id");
-// alert(id.description); // id 
-
-
-let user = {
-    name: 'Zhenya',
-    [id] : 123,
-
-    //  if id in square brackets it will be Symbol
-};
-
-// if we use for let key in user -> loop ignores Symbol
+// // let id = Symbol("id");
+// // alert(id.description); // id 
 
 
+// let user = {
+//     name: 'Zhenya',
+//     [id] : 123,
 
-// read from the global registry
-let id = Symbol.for("id"); // if the symbol did not exist, it is created
+//     //  if id in square brackets it will be Symbol
+// };
 
-// read it again (maybe from another part of the code)
-let idAgain = Symbol.for("id");
-
-// the same symbol
-alert( id === idAgain ); // tru
-
-
-alert(Symbol.keyFor(id))// returns name of symbol
+// // if we use for let key in user -> loop ignores Symbol
 
 
+
+// // read from the global registry
+// let id = Symbol.for("id"); // if the symbol did not exist, it is created
+
+// // read it again (maybe from another part of the code)
+// let idAgain = Symbol.for("id");
+
+// // the same symbol
+// alert( id === idAgain ); // tru
+
+
+// alert(Symbol.keyFor(id))// returns name of symbol
+
+// // 
