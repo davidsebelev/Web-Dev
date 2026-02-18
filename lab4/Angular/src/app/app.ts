@@ -1,30 +1,5 @@
-import { routes } from "./app.routes";
-import { ApplicationConfig } from "@angular/core";
-import { provideRouter } from "@angular/router";
-import { RouterOutlet } from "@angular/router";
-import { Component } from "@angular/core";
-import { Routes } from "@angular/router";
+import {Routes} from '@angular/router';
+import {Home} from './home/home';
+import {User} from './user/user';
 
-// export const routes: Routes = [];
-
-export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes)],
-}
-
-@Component({
-  selector:'app-root',
-  template:`
-  <nav>
-      <a href="/">Home</a>
-      |
-      <a href="/user">User</a>
-    </nav>
-
-    <router-outlet />
-  `,
-  imports:[RouterOutlet],
-})
-
-export class App{}
-
-
+export const routes: Routes = [];

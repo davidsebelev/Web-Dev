@@ -1,0 +1,35 @@
+<header>
+    <img src="https://upload.wikimedia.org/wikipedia/ru/a/aa/Logo_of_Kaspi_bank.png" alt="Kaspi Logo" width="50" height="50" class = "logogo">
+    <h2>Kaspi.kz</h2>
+</header>
+<!-- <h2>Kaspi bank</h2> -->
+
+<div class="product-grid">
+  @for (product of products; track product.id) {
+    <div class="product-card">
+      <img [src]="product.image" width="200" alt="{{product.name}}">
+
+      <div class="gallery">
+        <!-- возьми каждую фотку из product-list-components и выведи  -->
+        @for (img of product.images; track img) {
+          <img [src]="img" class="thumbnail" width="200" alt="Product gallery" (click) = "changeImage(product,img)">
+
+        }
+      </div>
+      <h3>{{ product.name }}</h3>
+      <p class="description">{{ product.description }}</p>
+      <p class="price">{{ product.price }} KZT</p>
+      <p class="rating-badge">Rating: {{ product.rating }}</p>
+      <a [href]="product.link" target="_blank" class="btn-buy">View on Kaspi</a>
+      <div class="share-actions">
+        <button (click)="shareOnWhatsApp(product.link)" class="btn-share wa">
+          WhatsApp
+        </button>
+        <button (click)="shareOnTelegram(product.link)" class="btn-share tg">
+          Telegram
+        </button>
+      </div>
+
+    </div>
+  }
+</div>

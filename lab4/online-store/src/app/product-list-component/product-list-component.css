@@ -1,0 +1,157 @@
+
+.product-grid {
+    /* режим сетки
+    ниже grid-template-columns записывает по типу заполняй на всю страницу и минимальный размер 280 если размер превышает то переноси ниже */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* расстояние между карточками gap */
+    gap: 25px;
+    /* внутренний отступ */
+    padding: 10px 80px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #FFFFFF;
+  }
+  
+  .product-card {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    /* сделай анимацию ровной */
+    transition: transform 0.2s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* .main-img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+  } */
+  
+  .price {
+    font-weight: bold;
+    color: #e21a1a; 
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    /* border: #eee; */
+    background: #eee;
+    border-radius: 5px;
+  }
+  
+  .btn-buy {
+    /* занимает всю доступную ширину */
+    display: block;
+    text-align: center;
+    background: red;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+
+  .btn-buy:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: #666;
+    /* отступы сверху и снизу 10 и справ слева 0 */
+    margin: 10px 0;
+    /* режим коробки
+    скрыть все после 3 строки */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+
+    /* спрятать что не попало */
+    overflow: hidden;
+  }
+  
+  /* .card-footer { */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* margin-top: auto; Pushes price/rating to the bottom */
+  /* } */
+  
+  .rating-badge {
+    background-color: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid #ddd;
+  }
+  /* галерея дополнительных фото */
+  .gallery {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+    justify-content: center;
+  }
+  
+
+
+  /* whatsapp and telegram */
+  .share-actions {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .btn-share {
+    flex: 1; /*нопки одного размера */
+    font-size: 0.8rem;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    transition: opacity 0.2s;
+  }
+  
+  .wa { background-color: #25D366; } 
+  .tg { background-color: #0088cc; } 
+  
+  .btn-share:hover {
+    opacity: 0.8; /* прозрачность */
+  }
+
+  /* дополнительне фотки */
+  .thumbnail {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eee;
+    object-fit: contain;
+    cursor: pointer; /* Делает курсор «ручкой» */
+    transition: 0.2s;
+  }
+  
+  .thumbnail:hover {
+    border-color: #007bff; /* Подсвечивает рамку синим */
+    transform: scale(1.1); /* Слегка увеличивает */
+  }
+
+  header{
+    display: flex;
+    border: 1px solid #eee;
+    flex-direction: row;
+    padding-left: 80px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  header .logogo{
+    padding: 10px 0;
+  }
