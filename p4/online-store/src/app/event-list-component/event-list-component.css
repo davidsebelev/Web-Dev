@@ -1,0 +1,135 @@
+
+.product-grid {
+    /* режим сетки
+    ниже grid-template-columns записывает по типу заполняй на всю страницу и минимальный размер 280 если размер превышает то переноси ниже */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* расстояние между карточками gap */
+    gap: 25px;
+    /* внутренний отступ */
+    padding: 10px 80px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #FFFFFF;
+  }
+  
+  .product-card {
+    border: 1px solid #eee;
+    padding: 15px;
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    /* сделай анимацию ровной */
+    transition: transform 0.2s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  
+  .price {
+    font-weight: bold;
+    color: #40B263; 
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    /* border: #eee; */
+    background: #eee;
+    border-radius: 5px;
+  }
+  
+  .btn-buy {
+    /* занимает всю доступную ширину */
+    display: block;
+    text-align: center;
+    background: #40B263;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+
+  .btn-buy:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .description {
+    font-size: 0.9rem;
+    color: #666;
+    /* отступы сверху и снизу 10 и справ слева 0 */
+    margin: 10px 0;
+    /* режим коробки
+    скрыть все после 3 строки */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+
+    /* спрятать что не попало */
+    overflow: hidden;
+  }
+
+  
+  .rating-badge {
+    background-color: #f8f9fa;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 1px solid #ddd;
+  }
+  /* галерея дополнительных фото */
+  .gallery {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+    justify-content: center;
+  }
+  
+
+  /* дополнительне фотки */
+  .thumbnail {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eee;
+    object-fit: contain;
+    cursor: pointer; /* Делает курсор «ручкой» */
+    transition: 0.2s;
+  }
+  
+
+  header{
+    display: flex;
+    border: 1px solid #eee;
+    flex-direction: row;
+    padding-left: 80px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  header .logogo{
+    padding: 10px 0;
+  }
+.btn-buy-better{
+    text-decoration: none;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 10px;
+    background: #40B263;
+    color: white;
+}
+.btn-buy-better:hover{
+    border-color: #023a17; /* Подсвечивает рамку синим */
+     transform: scale(1.1); /*Слегка увеличивает */
+    border: none;
+    opacity: 0.8;
+  }
+img{
+    border-radius: 12px;
+    /* width: 100%; */
+}

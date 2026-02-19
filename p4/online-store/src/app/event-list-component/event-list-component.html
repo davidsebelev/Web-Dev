@@ -1,0 +1,27 @@
+<header>
+    <img src="https://ticketon.kz/rrs/promo/logo.png" alt="Kaspi Logo" width="300" height="100" class = "logogo">
+    <!-- sjgsdjgjsg -->
+</header>
+<!-- <h2>Kaspi bank</h2> -->
+
+<div class="product-grid">
+  @for (product of products; track product.id) {
+    <div class="product-card">
+      <img [src]="product.image" width="200" alt="{{product.name}}">
+
+      <div class="gallery">
+        <!-- возьми каждую фотку из product-list-components и выведи  -->
+        @for (img of product.images; track img) {
+          <img [src]="img" class="thumbnail" width="200" alt="Product gallery" (click) = "changeImage(product,img)">
+
+        }
+      </div>
+      <h3>{{ product.name }}</h3>
+      <p class="description">{{ product.description }}</p>
+      <p class="price">{{ product.price }} KZT</p>
+      <a href="https://bankffin.kz/ru" target="_blank" class="btn-buy-better">Купить выгоднее</a>
+      <p class="rating-badge">Rating: {{ product.rating }}</p>
+      <a [href]="product.link" target="_blank" class="btn-buy">View on Ticketon</a>
+    </div>
+  }
+</div>
