@@ -1,0 +1,51 @@
+<div class="product-card">
+  <img
+    class="main-img"
+    [src]="product.image"
+    [alt]="product.name"
+  />
+
+  <!-- <div class="gallery">
+    @for (img of product.images; track img) {
+      <img
+        class="thumbnail"
+        [src]="img"
+        (click)="changeImage(img)"
+      />
+    }
+  </div> -->
+
+  <h3 class="title">{{ product.name }}</h3>
+
+  <p class="description">
+    {{ product.description }}
+  </p>
+
+  <div class="meta">
+    <span class="price">{{ product.price }} ₸</span>
+    <span class="rating-badge">⭐ {{ product.rating }}</span>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-like" (click)="like()">
+      ❤ {{ product.likes }}
+    </button>
+
+    <button class="btn btn-delete" (click)="remove()">
+      Delete
+    </button>
+  </div>
+
+  <div class="share-actions">
+    <button class="btn-share wa" (click)="shareWhatsApp()">
+      WhatsApp
+    </button>
+    <button class="btn-share tg" (click)="shareTelegram()">
+      Telegram
+    </button>
+  </div>
+
+  <a class="btn-buy" [href]="product.link" target="_blank" rel="noopener">
+    Open on Kaspi
+  </a>
+</div>

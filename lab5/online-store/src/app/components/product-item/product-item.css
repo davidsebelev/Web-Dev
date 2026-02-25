@@ -1,0 +1,137 @@
+.product-card {
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+}
+img {
+  width: 100%;
+}
+.gallery {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+.main-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+.title {
+  margin: 12px 0 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+.description {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 10px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 6px;
+}
+.price {
+  font-weight: bold;
+  color: #e21a1a;
+  font-size: 1.2rem;
+  border: 1px solid #ddd;
+  background: #eee;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+.rating-badge {
+  background-color: #f8f9fa;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+.btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+}
+.btn-like {
+  border-color: #ffb3b3;
+}
+.btn-delete {
+  border-color: #ff4d4f;
+  color: #ff4d4f;
+}
+.share-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+.btn-share {
+  flex: 1;
+  font-size: 0.85rem;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  transition: opacity 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-share:hover {
+  opacity: 0.9;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+}
+.wa {
+  background-color: #25D366;
+}
+.tg {
+  background-color: #0088cc;
+}
+.btn-buy {
+  display: block;
+  text-align: center;
+  background: red;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-buy:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+}
