@@ -1,0 +1,43 @@
+<h1 class="h1">Online Store</h1>
+
+
+<div class="cats">
+  <button
+    class="cat-btn"
+    [class.active]="selectedCategoryId === null"
+    (click)="selectCategory(null)"
+  >
+    All
+  </button>
+
+  @for (c of categories; track c.id) {
+    <button
+      class="cat-btn"
+      [class.active]="selectedCategoryId === c.id"
+      (click)="selectCategory(c.id)"
+    >
+      {{ c.name }}
+    </button>
+  }
+</div>
+
+
+<section class="favorites">
+  <h2>⭐ Favorites ({{ favorites.length }})</h2>
+
+  @if (favorites.length === 0) {
+    <p class="muted">No favorite products yet</p>
+  } @else {
+    <app-product-list
+      [products]="favorites"
+      (toggleFav)="toggleFavorite($event)"
+    />
+  }
+</section>
+
+
+<h2>Products</h2>
+<app-product-list
+  [products]="visibleProducts"
+  (toggleFav)="toggleFavorite($event)"
+/>

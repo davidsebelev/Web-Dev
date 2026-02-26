@@ -1,0 +1,30 @@
+.h1{ margin: 12px 0 10px; }
+
+.cats{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:16px;
+}
+
+.cat-btn{
+  padding:8px 12px;
+  border-radius:12px;
+  border:1px solid #ddd;
+  background:#fff;
+  cursor:pointer;
+}
+
+.cat-btn.active{
+  border-color:#333;
+}
+
+.favorites{
+  margin: 14px 0 22px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background:#fff;
+}
+
+.muted{ color:#666; }

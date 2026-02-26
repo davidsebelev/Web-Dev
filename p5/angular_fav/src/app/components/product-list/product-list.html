@@ -1,0 +1,8 @@
+<div class="grid">
+    @for (p of products; track p.id) {
+      <app-product-item
+        [product]="p"
+        (toggleFav)="onToggleFav($event)"
+      />
+    }
+  </div>
