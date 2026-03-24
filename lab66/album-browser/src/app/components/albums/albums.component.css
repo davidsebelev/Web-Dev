@@ -1,0 +1,60 @@
+.list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; }
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+.item:hover { background: #fafafa; }
+
+.id { font-size: 12px; color: #666; }
+.title { font-size: 14px; }
+
+.danger {
+  border: 1px solid #ddd;
+  background: white;
+  padding: 8px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.danger:hover { background: #f7f7f7; }
+
+.info { margin-top: 10px; color: #666; }
+.error { margin-top: 10px; color: #b00020; }
+
+.badge {
+  font-size: 12px;
+  background: #f1f1f1;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.btn-filter {
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.btn-filter:hover { background: #f7f7f7; }
+
+.item-actions { display: flex; gap: 8px; align-items: center; }
+
+.star {
+  border: 1px solid #ddd;
+  background: white;
+  padding: 8px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ccc;
+}
+.star.starred { color: gold; border-color: gold; }
+.star:hover { background: #f7f7f7; }
+
+.empty { color: #666; margin-top: 16px; }

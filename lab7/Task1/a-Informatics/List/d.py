@@ -1,0 +1,12 @@
+n = int(input())
+
+elements = list(map(int,input().split()))
+
+
+cnt = 0
+for i in range(len(elements)):
+    if i + 1 != len(elements):
+        if elements[i + 1] > elements[i]:cnt+=1
+
+
+print(cnt)

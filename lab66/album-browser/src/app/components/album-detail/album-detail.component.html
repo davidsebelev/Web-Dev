@@ -1,0 +1,32 @@
+<div *ngIf="loading" class="info">Loading album...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<div *ngIf="album && !loading" class="card">
+  <h2>Album #{{ album.id }}</h2>
+  <p><b>User:</b> {{ album.userId }}</p>
+
+  <label class="label">Title</label>
+  <input class="input" [(ngModel)]="editableTitle" />
+
+  <div class="actions">
+    <button class="btn" (click)="saveTitle()" [disabled]="saving">
+      {{ saving ? 'Saving...' : 'Save' }}
+    </button>
+    <button class="btn" (click)="viewPhotos()">View Photos</button>
+    <button class="btn" (click)="goBack()">Back</button>
+
+    <button
+  class="btn"
+  [class.starred]="isFavorite()"
+  (click)="toggleFavorite()"
+  [attr.aria-pressed]="isFavorite()"
+  [attr.aria-label]="isFavorite() ? 'Remove from favorites' : 'Add to favorites'"
+>
+  {{ isFavorite() ? '★ Favorited' : '☆ Add to favorites' }}
+</button>
+  </div>
+
+  
+
+  <p *ngIf="saveSuccess" style="color: green; margin-top: 8px;">Saved!</p>
+</div>
