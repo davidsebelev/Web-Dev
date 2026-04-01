@@ -1,16 +1,12 @@
-from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Product, Category
 
-# Create your views here.
-
-def prod_list(request):
+def product_list(request):
     products = Product.objects.all()
     data = []
-
     for p in products:
         data.append({
-            'id' : p.id,
+            'id': p.id,
             'name': p.name,
             'price': p.price,
             'description': p.description,
@@ -20,10 +16,9 @@ def prod_list(request):
         })
     return JsonResponse(data, safe=False)
 
-
-def prod_detail(request, id):
+def product_detail(request, id):
     try:
-        p = Product.objects.get(id = id)
+        p = Product.objects.get(id=id)
         data = {
             'id': p.id,
             'name': p.name,
@@ -34,34 +29,26 @@ def prod_detail(request, id):
             'category_id': p.category_id,
         }
         return JsonResponse(data)
-    except:
+    except Product.DoesNotExist:
         return JsonResponse({'error': 'Not found'}, status=404)
-    
+
 def category_list(request):
     categories = Category.objects.all()
     data = []
-
-    for cat in categories:
+    for c in categories:
         data.append({
-            'id': cat.id,
-            'name': cat.name
+            'id': c.id,
+            'name': c.name,
         })
+    return JsonResponse(data, safe=False)
 
-    return JsonResponse(data , safe=False)
-
-
-
-def get_category_id(request,id):
+def category_detail(request, id):
     try:
-        category = Category.objects.get(id = id)
-        data = {
-            'id': category.id,
-            'name': category.name
-        }
-        return JsonResponse(data)
-    except:
+        c = Category.objects.get(id=id)
+        return JsonResponse({'id': c.id, 'name': c.name})
+    except Category.DoesNotExist:
         return JsonResponse({'error': 'Not found'}, status=404)
-    
+
 def category_products(request, id):
     products = Product.objects.filter(category_id=id)
     data = []
